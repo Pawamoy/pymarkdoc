@@ -14,9 +14,8 @@ Why does this file exist, and why not put this in __main__?
 
   Also see (1) from http://click.pocoo.org/5/setuptools/#setuptools-integration
 """
-from os.path import join, basename, dirname, isfile, isdir, abspath
-from os import listdir
 import sys
+from os.path import abspath, basename, dirname
 
 import click
 from getdoc import get_module_doc
