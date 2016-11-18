@@ -44,13 +44,10 @@ License
 
 Software licensed under `MPL 2.0`_ license.
 
-.. _BSD-2 : https://opensource.org/licenses/BSD-2-Clause
 .. _MPL 2.0 : https://www.mozilla.org/en-US/MPL/2.0/
 
 Installation
 ============
-
-(Not yet on PyPi, clone the repo)
 
 ::
 
@@ -65,3 +62,19 @@ Development
 ===========
 
 To run all the tests: ``tox``
+
+I need help to make this tool available on command line.
+The thing is that `getdoc`_ needs a module as an object to get its documentation,
+so we have to import it. To import it, all the modules it is importing
+have to be installed (either on the system or in the current virtual environment). Python
+path also must have been set correctly. Even more, in the case of a Django project, settings
+have to be set up. This require many options and checks to be developed!
+
+.. _getdoc : https://github.com:Pawamoy/python-getdoc
+
+Todo:
+
+- Make tool available on command line
+- Add a command-line option to specify a virtualenv to activate
+- Add command-line options to work with frameworks (Django, Flask, ...)
+- Add command-line options to configure the rendering method

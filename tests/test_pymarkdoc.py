@@ -1,11 +1,7 @@
 
-from click.testing import CliRunner
-
-from pymarkdoc.cli import main
+import pymarkdoc
 
 
 def test_main():
-    runner = CliRunner()
-    result = runner.invoke(main, [])
+    assert pymarkdoc
 
-    return True
