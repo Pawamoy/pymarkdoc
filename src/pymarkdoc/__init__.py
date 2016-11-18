@@ -4,7 +4,7 @@ from os.path import abspath, basename, dirname
 from getdoc import get_module_doc
 
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 
 def _get_doc(path):

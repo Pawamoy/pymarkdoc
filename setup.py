@@ -27,7 +27,7 @@ if 'TOXENV' in os.environ and 'SETUPPY_CFLAGS' in os.environ:
 
 setup(
     name='pymarkdoc',
-    version='0.1.0',
+    version='0.2.0',
     license='MPL 2.0',
     description='Generate Markdown doc from your Python docstrings',
     long_description='%s\n%s' % (
