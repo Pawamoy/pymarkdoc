@@ -56,7 +56,7 @@ Installation
 Documentation
 =============
 
-https://github.com/Pawamoy/pymarkdoc.wiki
+https://github.com/Pawamoy/pymarkdoc/wiki
 
 Development
 ===========
