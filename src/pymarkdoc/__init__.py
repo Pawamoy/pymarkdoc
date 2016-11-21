@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+
+"""
+pymarkdoc module.
+
+PyMarkDoc or Python Markdown Doc is design to extract docstrings from
+your python code and output it as Markdown.
+"""
+
 import sys
 from os.path import abspath, basename, dirname
 
@@ -8,6 +17,7 @@ __version__ = "0.2.0"
 
 
 def _get_doc(path):
+    """Return doc given the path of a python module."""
     try:
         top_dir = __import__(basename(path))
     except ImportError:
@@ -20,7 +30,19 @@ def _get_doc(path):
         return get_module_doc(top_dir)
 
 
-def _doc_to_markdown(d, complete=False, current_module=None, current_class=None):
+def _doc_to_markdown(d, complete=False,
+                     current_module=None, current_class=None):
+    """
+
+    Args:
+        * `d` (dict): doc dictionary {type, name, doc, nest}
+        * `complete` (bool):
+        * `current_module`:
+        * `current_class`:
+
+    Return:
+
+    """
     lines = []
     if d['type'] == 'module':
         current_module = d['name']
