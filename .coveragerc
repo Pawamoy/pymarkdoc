@@ -1,0 +1,16 @@
+[paths]
+source =
+   src/pymarkdoc
+   */site-packages/pymarkdoc
+
+[run]
+branch = true
+source =
+    pymarkdoc
+    tests
+parallel = true
+
+[report]
+show_missing = true
+precision = 2
+omit = *migrations*
