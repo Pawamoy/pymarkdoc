@@ -13,7 +13,7 @@ from os.path import abspath, basename, dirname
 from getdoc import get_module_doc
 
 
-__version__ = "0.2.0"
+__version__ = '0.2.0'
 
 
 def _get_doc(path):
@@ -67,12 +67,18 @@ def _doc_to_markdown(d, complete=False,
 
     if d.get('nest', None) is not None:
         for _d in d['nest']:
-            lines.extend(_doc_to_markdown(_d, complete, current_module, current_class))
+            lines.extend(_doc_to_markdown(
+                _d, complete, current_module, current_class))
     return lines
 
 
-def _module_to_markdown(module, exclude_module=None, exclude_class=None, exclude_function=None, complete=False):
-    doc = get_module_doc(module, exclude_module, exclude_class, exclude_function)
+def _module_to_markdown(module,
+                        exclude_module=None,
+                        exclude_class=None,
+                        exclude_function=None,
+                        complete=False):
+    doc = get_module_doc(
+        module, exclude_module, exclude_class, exclude_function)
     return '\n'.join(_doc_to_markdown(doc, complete))
 
 

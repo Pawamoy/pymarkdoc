@@ -3,13 +3,11 @@
 from __future__ import absolute_import, print_function
 
 import io
-import os
 import re
 from glob import glob
-from os.path import basename, dirname, join, relpath, splitext
+from os.path import basename, dirname, join, splitext
 
-
-from setuptools import Extension, find_packages, setup
+from setuptools import find_packages, setup
 
 
 def read(*names, **kwargs):
@@ -18,12 +16,6 @@ def read(*names, **kwargs):
         encoding=kwargs.get('encoding', 'utf8')
     ).read()
 
-
-# Enable code coverage for C code: we can't use CFLAGS=-coverage in tox.ini, since that may mess with compiling
-# dependencies (e.g. numpy). Therefore we set SETUPPY_CFLAGS=-coverage in tox.ini and copy it to CFLAGS here (after
-# deps have been safely installed).
-if 'TOXENV' in os.environ and 'SETUPPY_CFLAGS' in os.environ:
-    os.environ['CFLAGS'] = os.environ['SETUPPY_CFLAGS']
 
 setup(
     name='pymarkdoc',
@@ -45,31 +37,26 @@ setup(
     zip_safe=False,
     classifiers=[
         # http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
         'Operating System :: Unix',
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
+        'Framework :: Django',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
-        # uncomment if you test on these interpreters:
-        # 'Programming Language :: Python :: Implementation :: IronPython',
-        # 'Programming Language :: Python :: Implementation :: Jython',
-        # 'Programming Language :: Python :: Implementation :: Stackless',
         'Topic :: Utilities',
     ],
     keywords=[
-        # eg: 'keyword1', 'keyword2', 'keyword3',
+        'pymarkdoc',
     ],
     install_requires=[
-        'click', 'getdoc'
+        'getdoc'
     ],
     extras_require={
         # eg:
@@ -81,13 +68,4 @@ setup(
             'pymarkdoc = pymarkdoc.cli:main',
         ]
     },
-    ext_modules=[
-        Extension(
-            splitext(relpath(path, 'src').replace(os.sep, '.'))[0],
-            sources=[path],
-            include_dirs=[dirname(path)]
-        )
-        for root, _, _ in os.walk('src')
-        for path in glob(join(root, '*.c'))
-    ],
 )

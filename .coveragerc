@@ -1,10 +1,12 @@
 [paths]
-source = src
+source =
+   src/pymarkdoc
+   */site-packages/pymarkdoc
 
 [run]
 branch = true
 source =
-    src
+    pymarkdoc
     tests
 parallel = true
 
