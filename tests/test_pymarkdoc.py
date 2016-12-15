@@ -2,9 +2,10 @@
 
 """Main test script."""
 
-import pymarkdoc
+
+from pymarkdoc.cli import main
 
 
 def test_main():
     """Main test method."""
-    assert pymarkdoc
+    main([])
