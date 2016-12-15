@@ -70,7 +70,6 @@ Development
 ===========
 
 To run all the tests: ``tox``
-<<<<<<< HEAD
 
 I need help to make this tool available on command line.
 The thing is that `getdoc`_ needs a module as an object to get its documentation,
@@ -79,7 +78,7 @@ have to be installed (either on the system or in the current virtual environment
 path also must have been set correctly. Even more, in the case of a Django project, settings
 have to be set up. This require many options and checks to be developed!
 
-.. _getdoc : https://github.com:Pawamoy/python-getdoc
+.. _getdoc : https://github.com/Pawamoy/python-getdoc
 
 Todo:
 

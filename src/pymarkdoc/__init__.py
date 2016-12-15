@@ -30,15 +30,18 @@ def _get_doc(path):
         return get_module_doc(top_dir)
 
 
-def _doc_to_markdown(d, complete=False,
-                     current_module=None, current_class=None):
+def _doc_to_markdown(d,
+                     complete=False,
+                     current_module=None,
+                     current_class=None):
     """
+    Convert Python data to list of Markdown lines.
 
     Args:
-        * `d` (dict): doc dictionary {type, name, doc, nest}
-        * `complete` (bool):
-        * `current_module`:
-        * `current_class`:
+        d (dict): doc dictionary {type, name, doc, nest}.
+        complete (bool): write headings even if doc is empty.
+        current_module: recursion helper.
+        current_class: recursion helper.
 
     Return:
 
@@ -83,11 +86,19 @@ def _module_to_markdown(module,
 
 
 def write_to_file(file, contents):
+    """
+    Write contents to a file.
+
+    Args:
+        file (str): path to the file.
+        contents (str): text to write.
+    """
     with open(file, 'w') as f:
         f.write(contents)
 
 
 def main(names):
+    """Main function."""
     paths = list(names)
     if len(paths) == 0:
         paths.append('.')
