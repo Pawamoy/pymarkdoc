@@ -6,7 +6,6 @@ Python Markdown Doc
 
 
 |travis|
-|codacy|
 |version|
 |wheel|
 |pyup|
@@ -16,10 +15,6 @@ Python Markdown Doc
 .. |travis| image:: https://travis-ci.org/Pawamoy/pymarkdoc.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/Pawamoy/pymarkdoc/
-
-.. |codacy| image:: https://api.codacy.com/project/badge/Grade/REPLACE_WITH_PROJECT_ID
-    :target: https://www.codacy.com/app/Pawamoy/pymarkdoc/
-    :alt: Codacy Code Quality Status
 
 .. |pyup| image:: https://pyup.io/account/repos/github/pawamoy/pymarkdoc/shield.svg
     :target: https://pyup.io/account/repos/github/pawamoy/pymarkdoc/
