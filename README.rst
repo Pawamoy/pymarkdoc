@@ -19,11 +19,11 @@ Python Markdown Doc
     :target: https://travis-ci.org/Pawamoy/pymarkdoc/
 
 .. |codacy| image:: https://api.codacy.com/project/badge/Grade/REPLACE_WITH_PROJECT_ID
-    :target: https://www.codacy.com/app/Pawamoy/pymarkdoc/
+    :target: https://www.codacy.com/app/Pawamoy/pymarkdoc/dashboard
     :alt: Codacy Code Quality Status
 
-.. |pyup| image:: https://pyup.io/account/repos/github/pawamoy/pymarkdoc/shield.svg
-    :target: https://pyup.io/account/repos/github/pawamoy/pymarkdoc/
+.. |pyup| image:: https://pyup.io/repos/github/Pawamoy/pymarkdoc/shield.svg
+    :target: https://pyup.io/repos/github/Pawamoy/pymarkdoc/
     :alt: Updates
 
 .. |gitter| image:: https://badges.gitter.im/Pawamoy/pymarkdoc.svg
