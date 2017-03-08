@@ -16,8 +16,8 @@ Python Markdown Doc
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/Pawamoy/pymarkdoc/
 
-.. |pyup| image:: https://pyup.io/account/repos/github/pawamoy/pymarkdoc/shield.svg
-    :target: https://pyup.io/account/repos/github/pawamoy/pymarkdoc/
+.. |pyup| image:: https://pyup.io/repos/github/Pawamoy/pymarkdoc/shield.svg
+    :target: https://pyup.io/repos/github/Pawamoy/pymarkdoc/
     :alt: Updates
 
 .. |gitter| image:: https://badges.gitter.im/Pawamoy/pymarkdoc.svg
