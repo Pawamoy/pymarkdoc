@@ -27,7 +27,6 @@ Python Markdown Doc
     :target: https://landscape.io/github/Pawamoy/pymarkdoc/
     :alt: Code Quality Status
 
-
 .. |pyup| image:: https://pyup.io/repos/github/pawamoy/pymarkdoc/shield.svg
     :target: https://pyup.io/repos/github/pawamoy/pymarkdoc/
     :alt: Updates
@@ -66,7 +65,8 @@ Installation
 Documentation
 =============
 
-https://github.com/Pawamoy/pymarkdoc/wiki
+http://pymarkdoc.readthedocs.io/en/latest/
+
 
 Development
 ===========
